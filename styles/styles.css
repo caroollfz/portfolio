@@ -1,0 +1,159 @@
+/* objetivo do css é definir as cores do tema e estilo da página */
+
+/*importando a fonte Krona One do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor_primaria: #000000; /* cor de fundo */
+    --cor_secundaria : #f6f6f6; /* cor do texto */
+    --cor_terciaria: #b150de; /* cor de destaque */
+    --cor_hover: #272727; /* cor de fundo ao passar o mouse */
+
+    --fonte_primaria: "Krona One", sans-serif; /* fonte principal */
+    --fonte_secundaria: "Montserrat", sans-serif; /* fonte secundária */
+}
+
+
+body {
+    box-sizing: border-box; /* para garantir que o padding(preenchimento) e border(borda) sejam incluídos na largura e altura total dos elementos */
+    /* height: 100vh; altura total da janela de visualização */
+    background-color: var(--cor_primaria); /* cor de fundo */
+    color: var(--cor_secundaria); /* cor do texto */
+
+}
+
+.cabecalho{
+    padding: 2% 0 0 10%; /* preenchimento interno do cabeçalho */
+}
+
+.cabecalho__navegacao{
+    display: flex; /* para alinhar os itens dentro do cabeçalho */
+    gap: 40px; /* espaço entre os links de navegação */
+  
+}
+
+.cabecalho__tipo{
+    font-family: var(--fonte_secundaria); /* fonte do cabeçalho */
+    font-size: 1.5rem; /* tamanho da fonte do cabeçalho */
+    color: var(--cor_terciaria); /* cor do texto do cabeçalho */
+    text-decoration: none; /* remove o sublinhado dos links */
+    font-weight: 600; /* peso da fonte do cabeçalho */
+}
+
+.titulo-destaque /* classe para destacar o texto do título */
+{
+    color: var(--cor_terciaria); /* cor do texto em negrito em roxo*/
+}
+
+.apresentacao /* classe para o main, que agrupa a apresentação */
+{
+    padding: 5% 10%; /* preenchimento de 5% no topo e 10% nas laterais */
+    display: flex; /* para alinhar os itens dentro do main */
+    align-items: center; /* para centralizar os itens horizontalmente */
+    justify-content: center; /* centraliza os dois itens */
+    gap: 82px; /* controla o espaço entre o conteudo e a imagem */
+}
+
+.apresentacao__titulo /* classe para o título da apresentação */
+{
+    font-size: 2.25rem; /* tamanho da fonte */
+    font-family: var(--fonte_primaria); /* fonte do título */
+}
+
+.apresentacao__conteudo /* classe para o conteúdo da apresentação */
+{
+    display: flex; /* para alinhar os itens dentro do conteúdo */
+    flex-direction: column; /* para alinhar os itens verticalmente */
+    gap: 20px; /* espaço entre os itens */
+    width: 50%; /* largura de 50% */
+}
+
+.apresentacao__descricao /* classe para a descrição da apresentação */
+{
+    font-size: 1.5rem; /* tamanho da fonte */
+    font-family: var(--fonte_secundaria); /* fonte da descrição */
+}
+
+.apresentacao__redes-sociais /* classe para as redes sociais */
+{
+    display: flex; /* para alinhar os itens dentro da seção de redes sociais */
+    flex-direction: column; /* para alinhar os botões verticalmente */
+    justify-content: space-between; /* para distribuir o espaço entre os itens */
+    align-items: center; /* para centralizar os itens horizontalmente */
+    gap: 20px; /* espaço entre os botões */
+}
+
+.apresentacao__redes-subtitulos /* classe para o subtítulo das redes sociais */
+{
+    font-size: 1.5rem; /* tamanho da fonte do subtítulo */
+    font-family: var(--fonte_primaria); /* fonte do subtítulo */
+    margin-bottom: 10px; /* margem inferior do subtítulo */
+    font-weight: 400;
+}
+
+.apresentacao__botoes /* classe para os botões de redes sociais */
+{
+    /* background-color: #b150de; cor de fundo dos botões */
+    width: 50% ;   /* largura dos botões */
+    text-align: center; /* centraliza o texto dentro dos botões */
+    border-radius: 10px; /* borda arredondada dos botões */
+    font-size: 1.5rem; /* tamanho da fonte dos botões */
+    padding: 21.5px 0; /* preenchimento interno dos botões vertical e horizontal (nessa sequência) */
+    text-decoration: none; /* remove o sublinhado dos links */
+    color: var(--cor_secundaria); /* cor do texto dos botões */
+    font-family: var(--fonte_secundaria); /* fonte da descrição */
+    border: 2px solid var(--cor_terciaria); /* borda dos botões */
+    font-weight: 600; /* peso da fonte dos botões */
+    display: flex; /* para alinhar os itens dentro dos botões */
+    justify-content: center; /* para centralizar os itens horizontalmente */
+    gap: 10px; /* espaço entre o ícone e o texto dentro dos botões */
+    
+}
+
+.apresentacao__botoes img { /* classe para o ícone dentro dos botões */
+  filter: invert(63%) sepia(60%) saturate(400%) hue-rotate(260deg) brightness(70%) contrast(80%);
+}
+
+.apresentacao__imagem /* classe para a imagem da apresentação */
+{
+    width: 50%; /* largura da imagem */
+}
+
+.apresentacao__botoes:hover /* efeito de hover nos botões */
+{
+    background: var(--cor_hover); /* cor de fundo ao passar o mouse */
+    color: var(--cor_secundaria); /* cor do texto ao passar o mouse */
+}
+
+.rodape /* classe para o rodapé */
+{
+    text-align: center; /* centraliza o texto do rodapé */
+    font-size: 1.5rem; /* tamanho da fonte do rodapé */
+    font-family: var(--fonte_secundaria); /* fonte do rodapé */
+    color: var(--cor_secundaria); /* cor do texto do rodapé */
+    background-color: var(--cor_terciaria); /* cor de fundo do rodapé */
+    padding: 20px; /* preenchimento interno do rodapé */
+    font-weight: 400; /* peso da fonte do rodapé */
+}
+
+@media (max-width: 1200px) { /* para telas menores que 1200px */
+
+    .cabecalho {
+        padding: 10%; /* reduz o preenchimento do cabeçalho */
+    }
+
+    .cabecalho__navegacao {
+        justify-content: center; /* centraliza os links de navegação */
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse; /* muda a direção para coluna em telas menores */
+        padding: 5%; /* reduz o preenchimento do main */
+    }
+    .apresentacao__conteudo {
+        width: auto; /* largura total do conteúdo */
+    }
+
+
+
+}

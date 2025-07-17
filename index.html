@@ -1,0 +1,47 @@
+<!-- aqui é o cabeçalho da pagina, ou seja, o title = nome a pagina, e como ela sera definida-->
+ <!-- precismos também linkar o css com o html para que as estilizações sejam aplicadas -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<!-- aqui é o corpo da pagina, onde o conteudo sera exibido -->
+<body>
+    <header class="cabecalho">
+        <!-- aqui é o cabeçalho da página , aba de navegação-->
+        <nav class="cabecalho__navegacao">
+            <!-- tipos de navegação -->
+           <a class="cabecalho__tipo" href="index.html">Home</a>
+           <a class="cabecalho__tipo" href="about.html">Sobre mim</a>
+        </nav>
+    </header>
+        <main class = "apresentacao">
+            <section class = "apresentacao__conteudo">
+                <!-- heading 1 = titulo  e strong = deixar a letra mais destacada, class = classe da tag-->
+                <h1 class="apresentacao__titulo"> Eleve seu negócio digital a outro nível <strong class="titulo-destaque"> com um Front-end de qualidade!</strong></h1>
+                <!-- parágrafo de boas-vindas -->
+                <p class="apresentacao__descricao"> Transformando ideias em soluções visuais que encantam, criativas e com qualidade. Criar experiências digitais únicas que unem design e funcionalidade é o caminho para elevar qualquer projeto ao próximo nível, porque quando a criatividade encontra a tecnologia, o resultado é inovação que realmente faz a diferença.</p>
+                <!-- a = âncora, aqui são os links para redes sociais -->
+                 <div class="apresentacao__redes-sociais">
+                    <h2 class="apresentacao__redes-subtitulos">Acesse minhas redes:</h2>
+                     <a class="apresentacao__botoes" href="https://www.instagram.com/caroollfz" target="_blank"> <i class="icons__redes"></i>
+                        <img src="./assets/instagram.png" alt="Instagram" width="30" height="30"> Instagram
+                    </a>
+                     <a class="apresentacao__botoes" href="https://github.com/caroollfz" target="_blank"> <i class="icons__redes"></i>
+                         <img src="./assets/github.png" alt="GitHub" width="30" height="30"> GitHub
+                     </a>
+                     <a class="apresentacao__botoes" href="https://www.linkedin.com/in/caroollfz/" target="_blank"> <i class="icons__redes"></i>
+                         <img src="./assets/linkedin.png" alt="LinkedIn" width="30" height="30"> LinkedIn
+                     </a>
+                 </div>
+            </section>
+            <img class="apresentacao__imagem" src="./assets/home.jpg" alt="Foto da Carol" >
+        </main>
+        <footer>
+            <p class="rodape">Desenvolvido por Carolina Ferreira.</p>
+        </footer>
+</body>
+</html>
